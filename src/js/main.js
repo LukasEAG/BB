@@ -25,6 +25,7 @@ const colorOb = {
 	lineUp: '--bb-pink',
 	info: '--bb-blue',
 	partners: '--bb-salmon',
+	news: '--bb-green',
 	tickets: '--bb-fluo',
 	contact: '--bb-purple',
 }
@@ -66,9 +67,9 @@ menuBtns.forEach((link, index) => {
 
 		if (main.classList.contains('active')) {
 			defaultPageHeight()
-			pageHendler(btnAttribute)
+			pageHendler(btnAttribute, link.innerText)
 		} else {
-			pageHendler(btnAttribute)
+			pageHendler(btnAttribute, link.innerText)
 		}
 	})
 })
@@ -100,7 +101,7 @@ const titleBox = document.querySelector('.title-menu-checked')
 const h2Title = document.createElement('h2')
 let currentPage
 
-const pageHendler = pageAttr => {
+const pageHendler = (pageAttr, pageTitle) => {
 	body.classList.contains('show-menu') ? closeMobileMenu() : undefined
 
 	const page = document.querySelector(`[page-name=${pageAttr}]`)
@@ -110,7 +111,7 @@ const pageHendler = pageAttr => {
 	document.body.style.setProperty('--bg-color', `var(${colorClicked[pageAttr]})`)
 	currentPage = page
 	addPageHeight(pageH)
-	titleBoxHendler(pageAttr)
+	titleBoxHendler(pageAttr, pageTitle)
 }
 
 const closeMobileMenu = () => {
@@ -135,10 +136,10 @@ const defaultPageHeight = () => {
 	mainPage.removeAttribute('style')
 	titleBox.removeChild(h2Title)
 }
-const titleBoxHendler = name => {
+const titleBoxHendler = (name, pageName) => {
 	titleBox.style.setProperty('--title-bg-color', `var(${colorOb[name]})`)
 	titleBox.appendChild(h2Title)
-	h2Title.innerText = name
+	h2Title.innerText = pageName
 }
 const btnClosePage = document.querySelector('.close-menu__btn')
 
