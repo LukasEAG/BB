@@ -109,8 +109,8 @@ a {
 	}
 	&__fest {
 		display: inline-block;
-		margin-top: .5rem;
-		padding: 0 0 0 .2rem;
+		margin-top: 0.5rem;
+		padding: 0 0 0 0.2rem;
 		background-color: var(--bb-fluo);
 		color: var(--bb-black);
 		font-size: 2.2rem;
@@ -462,8 +462,8 @@ a {
 		}
 
 		& span {
-			margin-top: .5rem;
-			padding: 0 0 0 .2rem;
+			margin-top: 0.5rem;
+			padding: 0 0 0 0.2rem;
 			display: inline-block;
 			background-color: var(--bb-fluo);
 			color: var(--bb-black);
@@ -573,6 +573,7 @@ a {
 			height: 100%;
 			background: rgba($color: #000000, $alpha: 0.8);
 			font-size: 2.2rem;
+			text-align: center;
 			z-index: 5;
 			content: 'START REJESTRACJI WKRÓTCE!';
 		}
@@ -1217,6 +1218,7 @@ a {
 @media screen and (max-width: 480px) {
 	.title {
 		&__box {
+			max-width: 270px;
 			.close-menu {
 				top: -55%;
 				right: 0;
@@ -1224,6 +1226,20 @@ a {
 					font-size: 2.6rem;
 				}
 			}
+		}
+
+		&__box-left {
+			& h1 {
+				font-size: 2.2rem;
+			}
+			& span {
+				font-size: 1.8rem;
+			}
+		}
+	}
+	.lineUp {
+		&__box {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		}
 	}
 }
