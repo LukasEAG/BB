@@ -94,12 +94,13 @@ a {
 		grid-template-columns: auto auto auto;
 		height: 92px;
 		max-width: 1800px;
-		background: var(--bb-bg-nav);
+		background: var(--bb-nav);
 	}
 
 	&__logo {
+		padding-top: 2rem;
 		align-self: flex-end;
-		max-width: 200px;
+		max-width: 150px;
 	}
 
 	&__bb {
@@ -108,9 +109,14 @@ a {
 	}
 	&__fest {
 		display: inline-block;
-		padding: 0.43rem 2rem;
-		background-color: var(--bb-green);
-		color: var(--bb-white);
+		margin-top: .5rem;
+		padding: 0 0 0 .2rem;
+		background-color: var(--bb-fluo);
+		color: var(--bb-black);
+		font-size: 2.2rem;
+		line-height: 1.4rem;
+		text-transform: uppercase;
+		font-family: 'Visitor', serif;
 	}
 
 	&__menu,
@@ -259,25 +265,26 @@ a {
 		& h1 {
 			// text-align: start;
 			font-size: 3.5rem;
-			letter-spacing: -1rem;
-			color: var(--bb-red);
+			color: var(--bb-fluo);
 		}
-		& h1,
-		span {
-			font-family: 'Dogica';
-			// font-weight: 1000;
-			// white-space: pre-line;
-		}
+		// & h1,
+		// span {
+		// 	// font-family: 'VHSGhotic';
+		// 	// font-weight: 1000;
+		// 	// white-space: pre-line;
+		// }
 
 		& span {
 			position: absolute;
-			bottom: -2.3rem;
+			bottom: -2rem;
 			left: 0;
-			padding: 0.5rem 2rem;
-			background-color: var(--bb-green);
-			color: var(--bb-white);
-			font-size: 1rem;
+			padding: 0rem 0rem 0 0.2rem;
+			background-color: var(--bb-fluo);
+			color: var(--bb-black);
+			font-size: 2.2rem;
+			line-height: 1.4rem;
 			text-transform: uppercase;
+			font-family: 'Visitor', serif;
 		}
 	}
 
@@ -449,16 +456,21 @@ a {
 	}
 	&__card-back-title {
 		& h3 {
-			color: var(--bb-fluo);
+			color: var(--bb-white);
 			font-size: 2.6rem;
 			text-transform: uppercase;
 		}
 
 		& span {
+			margin-top: .5rem;
+			padding: 0 0 0 .2rem;
 			display: inline-block;
-			padding: 0.43rem 2rem;
-			background-color: var(--bb-green);
-			color: var(--bb-white);
+			background-color: var(--bb-fluo);
+			color: var(--bb-black);
+			font-size: 2.2rem;
+			line-height: 1.4rem;
+			text-transform: uppercase;
+			font-family: 'Visitor', serif;
 		}
 	}
 

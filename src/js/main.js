@@ -28,6 +28,13 @@ const colorOb = {
 	tickets: '--bb-fluo',
 	contact: '--bb-purple',
 }
+const colorClicked = {
+	lineUp: '--bb-nav',
+	info: '--bb-salmon',
+	partners: '--bb-salmon',
+	tickets: '--bb-dark-blue',
+	contact: '--bb-purple',
+}
 let setBgColor
 let colorIndex
 let btnAttribute
@@ -49,7 +56,9 @@ menuBtns.forEach((link, index) => {
 	})
 
 	link.addEventListener('mouseleave', () => {
-		document.body.style.setProperty('--bg-color', `var(${setBgColor})`)
+		// document.body.style.setProperty('--bg-color', `var(${setBgColor})`)
+
+		main.classList.contains('active') ? undefined :  document.body.style.setProperty('--bg-color', `var(${setBgColor})`)
 	})
 
 	link.addEventListener('click', () => {
@@ -92,27 +101,28 @@ const h2Title = document.createElement('h2')
 let currentPage
 
 const pageHendler = pageAttr => {
-	body.classList.contains('show-menu') ? closeMobileMenu() : undefined;
-	
+	body.classList.contains('show-menu') ? closeMobileMenu() : undefined
+
 	const page = document.querySelector(`[page-name=${pageAttr}]`)
 	const pageH = page.offsetHeight + 'px'
 	main.classList.add('active')
 	page.classList.add('active')
+	document.body.style.setProperty('--bg-color', `var(${colorClicked[pageAttr]})`)
 	currentPage = page
 	addPageHeight(pageH)
 	titleBoxHendler(pageAttr)
 }
 
 const closeMobileMenu = () => {
-window.body.classList.remove('show-menu', 'stop-scrolling')
-		btnMobileMenu.innerText = 'Menu'
-		btnMobileMenu.removeAttribute('btn-close-mobileMenu')
+	window.body.classList.remove('show-menu', 'stop-scrolling')
+	btnMobileMenu.innerText = 'Menu'
+	btnMobileMenu.removeAttribute('btn-close-mobileMenu')
 }
 
 const openMobileMenu = () => {
 	window.body.classList.add('show-menu', 'stop-scrolling')
-		btnMobileMenu.innerText = 'X'
-		btnMobileMenu.setAttribute('btn-close-mobileMenu', '')
+	btnMobileMenu.innerText = 'X'
+	btnMobileMenu.setAttribute('btn-close-mobileMenu', '')
 }
 
 const addPageHeight = pageH => {
@@ -126,7 +136,6 @@ const defaultPageHeight = () => {
 	titleBox.removeChild(h2Title)
 }
 const titleBoxHendler = name => {
-	console.log(colorIndex)
 	titleBox.style.setProperty('--title-bg-color', `var(${colorOb[name]})`)
 	titleBox.appendChild(h2Title)
 	h2Title.innerText = name
