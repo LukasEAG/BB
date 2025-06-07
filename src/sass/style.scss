@@ -21,7 +21,6 @@ body {
 	min-height: 100vh;
 	background: var(--bg-color);
 	transition: background-color 0.4s;
-	// height: 100vh;
 }
 
 nav,
@@ -267,13 +266,6 @@ a {
 			font-size: 3.5rem;
 			color: var(--bb-fluo);
 		}
-		// & h1,
-		// span {
-		// 	// font-family: 'VHSGhotic';
-		// 	// font-weight: 1000;
-		// 	// white-space: pre-line;
-		// }
-
 		& span {
 			position: absolute;
 			bottom: -2rem;
@@ -291,8 +283,6 @@ a {
 	&__box-right {
 		grid-column: 3/4;
 		color: var(--bb-white);
-		// text-align: start;
-
 		& span {
 			display: block;
 
@@ -309,7 +299,6 @@ a {
 
 .body-menu {
 	display: flex;
-	// display: none;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -318,14 +307,9 @@ a {
 	height: 100%;
 
 	&__box {
-		// margin: 10rem 0 0;
 		display: flex;
 		flex-direction: column;
-		// justify-content: center;
 		align-items: center;
-		// width: 100%;
-		// height: 100%;
-		// z-index: 5;
 	}
 
 	&__cards {
@@ -876,13 +860,6 @@ a {
 	}
 }
 
-// @media screen and (max-width: 1024px) and (orientation: 'portrait') {
-// 	.body-menu {
-// 		&::after {
-// 			background: url(../img/bbLayerTablet.png);
-// 		}
-// 	}
-// }
 @media screen and (max-width: 1100px) {
 	.nav-bar {
 		&__menu {
@@ -1080,8 +1057,6 @@ a {
 	.body-menu {
 		&__box {
 			position: relative;
-			// top: 92px;
-			// margin: 5rem 0 0;
 			padding: 0 1rem;
 		}
 

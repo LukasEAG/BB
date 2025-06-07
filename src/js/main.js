@@ -1,24 +1,5 @@
-// const { info } = require('sass')
 const body = document.querySelector('body')
 const main = document.querySelector('main')
-// function headerHeight() {
-// 	const vh = window.innerHeight - (96 + 62)
-// 	main.style.minHeight = `${vh}px`
-// }
-
-// const windowHeightHandler = () => {
-// 	if ( window.innerWidth > 769) {
-// 		headerHeight()
-// 	} else {
-// 		main.style.height = `100%`
-// 	}
-// }
-
-// window.addEventListener('resize', () => {
-// 	windowHeightHandler()
-// })
-
-// windowHeightHandler()
 
 const colorTable = ['--bb-pink', '--bb-green', '--bb-fluo', '--bb-blue', '--bb-salmon', '--bb-grey']
 const colorOb = {
@@ -46,7 +27,6 @@ window.addEventListener('load', () => {
 	setBgColor = randomColor
 })
 
-// const listLink = document.querySelectorAll('.body-menu__card')
 const menuBtns = document.querySelectorAll('[btn-name]')
 
 menuBtns.forEach((link, index) => {
@@ -57,9 +37,7 @@ menuBtns.forEach((link, index) => {
 	})
 
 	link.addEventListener('mouseleave', () => {
-		// document.body.style.setProperty('--bg-color', `var(${setBgColor})`)
-
-		main.classList.contains('active') ? undefined :  document.body.style.setProperty('--bg-color', `var(${setBgColor})`)
+		main.classList.contains('active') ? undefined : document.body.style.setProperty('--bg-color', `var(${setBgColor})`)
 	})
 
 	link.addEventListener('click', () => {
@@ -79,9 +57,6 @@ const addBodyColor = btnAttribute => {
 
 	document.body.style.setProperty('--bg-color', `var(${colorOb[btnAttribute]})`)
 }
-// const addBodyColor = index => {
-// 	document.body.style.setProperty('--bg-color', `var(${colorHover[index]})`)
-// }
 
 const btnMobileMenu = document.querySelector('[mobile-menu-btn]')
 const mobileMenu = document.querySelector('[mobile-menu]')
