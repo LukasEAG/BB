@@ -94,12 +94,13 @@ a {
 		grid-template-columns: auto auto auto;
 		height: 92px;
 		max-width: 1800px;
-		background: var(--bb-bg-nav);
+		background: var(--bb-nav);
 	}
 
 	&__logo {
+		padding-top: 2rem;
 		align-self: flex-end;
-		max-width: 200px;
+		max-width: 150px;
 	}
 
 	&__bb {
@@ -108,9 +109,14 @@ a {
 	}
 	&__fest {
 		display: inline-block;
-		padding: 0.43rem 2rem;
-		background-color: var(--bb-green);
-		color: var(--bb-white);
+		margin-top: 0.5rem;
+		padding: 0 0 0 0.2rem;
+		background-color: var(--bb-fluo);
+		color: var(--bb-black);
+		font-size: 2.2rem;
+		line-height: 1.4rem;
+		text-transform: uppercase;
+		font-family: 'Visitor', serif;
 	}
 
 	&__menu,
@@ -259,25 +265,26 @@ a {
 		& h1 {
 			// text-align: start;
 			font-size: 3.5rem;
-			letter-spacing: -1rem;
-			color: var(--bb-red);
+			color: var(--bb-fluo);
 		}
-		& h1,
-		span {
-			font-family: 'Dogica';
-			// font-weight: 1000;
-			// white-space: pre-line;
-		}
+		// & h1,
+		// span {
+		// 	// font-family: 'VHSGhotic';
+		// 	// font-weight: 1000;
+		// 	// white-space: pre-line;
+		// }
 
 		& span {
 			position: absolute;
-			bottom: -2.3rem;
+			bottom: -2rem;
 			left: 0;
-			padding: 0.5rem 2rem;
-			background-color: var(--bb-green);
-			color: var(--bb-white);
-			font-size: 1rem;
+			padding: 0rem 0rem 0 0.2rem;
+			background-color: var(--bb-fluo);
+			color: var(--bb-black);
+			font-size: 2.2rem;
+			line-height: 1.4rem;
 			text-transform: uppercase;
+			font-family: 'Visitor', serif;
 		}
 	}
 
@@ -386,13 +393,15 @@ a {
 		background-color: #cdacc1;
 	}
 	h3,
-	h4,
-	h5 {
-		padding: 2rem 0;
+	h4 {
+		padding: 2rem 0 0.7rem;
 	}
 	span {
 		padding: 0.2rem 0;
 		display: block;
+	}
+	ul {
+		margin-left: 3rem;
 	}
 	&.active {
 		opacity: 1;
@@ -447,16 +456,21 @@ a {
 	}
 	&__card-back-title {
 		& h3 {
-			color: var(--bb-fluo);
+			color: var(--bb-white);
 			font-size: 2.6rem;
 			text-transform: uppercase;
 		}
 
 		& span {
+			margin-top: 0.5rem;
+			padding: 0 0 0 0.2rem;
 			display: inline-block;
-			padding: 0.43rem 2rem;
-			background-color: var(--bb-green);
-			color: var(--bb-white);
+			background-color: var(--bb-fluo);
+			color: var(--bb-black);
+			font-size: 2.2rem;
+			line-height: 1.4rem;
+			text-transform: uppercase;
+			font-family: 'Visitor', serif;
 		}
 	}
 
@@ -507,22 +521,30 @@ a {
 	&__box {
 		margin: 0 auto;
 		max-width: 600px;
+		background: rgba($color: #000000, $alpha: 0.6);
 	}
 
 	&__title {
 		padding: 2rem;
 		text-align: center;
+
+		& a {
+			color: var(--bb-red);
+		}
+		& span {
+			color: var(--bb-fluo);
+		}
 	}
 
 	&__form {
+		position: relative;
 		margin: 0 auto;
-		padding: 3rem 2rem;
+		padding: 3rem 2rem 0;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		background: rgba($color: #000000, $alpha: 0.6);
 
 		& h4 {
 			margin-bottom: 2rem;
@@ -531,9 +553,33 @@ a {
 			background-color: var(--bb-red);
 			color: var(--bb-white);
 		}
+
+		& h5 {
+			margin: 0 auto;
+			padding: 3rem 1rem;
+			color: var(--bb-white);
+			text-align: center;
+			font-size: 1.4rem;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: rgba($color: #000000, $alpha: 0.8);
+			font-size: 2.2rem;
+			text-align: center;
+			z-index: 5;
+			content: 'START REJESTRACJI WKRÓTCE!';
+		}
 	}
 	&__form-row-box {
-		max-width: 400px;
+		max-width: 450px;
 		width: 100%;
 	}
 
@@ -545,9 +591,8 @@ a {
 		& label {
 			margin: auto 0;
 			padding: 0 1rem;
-			font-size: 2rem;
+			font-size: 1.8rem;
 			text-transform: uppercase;
-			text-align: end;
 		}
 
 		&:nth-of-type(1) {
@@ -566,15 +611,20 @@ a {
 			}
 		}
 		&:nth-of-type(4) {
+			& label {
+				color: var(--bb-fluo);
+			}
+		}
+		&:nth-of-type(5) {
 			position: relative;
-			grid-template-columns: 1fr auto;
+			grid-template-columns: 1fr auto 1fr;
 
 			& label {
 				justify-self: flex-end;
 				display: inline-block;
 				font-size: 0.8rem;
 				text-align: start;
-				max-width: 200px;
+				max-width: 220px;
 			}
 			& input {
 				position: relative;
@@ -599,20 +649,17 @@ a {
 
 	& button {
 		display: block;
-		margin: 1rem 0 1rem auto;
+		margin: 0 0 0 auto;
 		padding: 0.8rem 2rem;
 		width: auto;
 		height: 100%;
 		background: var(--bb-fluo);
 		border: none;
+		color: var(--bb-red);
+		font-size: 1.6rem;
+		font-family: 'VHSGothic';
+		text-transform: uppercase;
 		cursor: pointer;
-
-		& span {
-			color: var(--bb-red);
-			font-size: 1.6rem;
-			font-family: 'VHSGothic';
-			text-transform: uppercase;
-		}
 	}
 	&.active {
 		opacity: 1;
@@ -913,7 +960,7 @@ a {
 			justify-content: space-around;
 			height: 100%;
 			width: 50%;
-			background: var(--bb-bg-nav);
+			background: var(--bb-nav);
 
 			& a {
 				&:hover {
@@ -972,8 +1019,8 @@ a {
 		&__logo {
 			align-self: center;
 
-			& :nth-of-type(2) {
-				font-size: 0.6rem;
+			&:nth-of-type(2) {
+				font-size: 1.8rem;
 			}
 		}
 
@@ -1100,7 +1147,7 @@ a {
 			padding: 2rem 1rem;
 		}
 	}
-	
+
 	.contact {
 		&__title-text {
 			& p {
@@ -1171,15 +1218,28 @@ a {
 @media screen and (max-width: 480px) {
 	.title {
 		&__box {
+			max-width: 270px;
 			.close-menu {
-				top: -100%;
+				top: -55%;
 				right: 0;
-				transform: translate(0, 50%);
 				&__btn {
 					font-size: 2.6rem;
 				}
 			}
 		}
-	}
 
+		&__box-left {
+			& h1 {
+				font-size: 2.2rem;
+			}
+			& span {
+				font-size: 1.8rem;
+			}
+		}
+	}
+	.lineUp {
+		&__box {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+	}
 }
