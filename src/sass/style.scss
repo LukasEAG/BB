@@ -97,15 +97,20 @@ a {
 	}
 
 	&__logo {
-		padding-top: 2rem;
+		padding-top: 1rem;
 		align-self: flex-end;
-		max-width: 150px;
+		max-width: 180px;
+
+		& img {
+			width: 100%;
+			height: auto;
+		}
 	}
 
-	&__bb {
-		font-size: 2.6rem;
-		color: var(--bb-fluo);
-	}
+	// &__bb {
+	// 	font-size: 2.6rem;
+	// 	color: var(--bb-fluo);
+	// }
 	&__fest {
 		display: inline-block;
 		margin-top: 0.5rem;
@@ -202,7 +207,8 @@ a {
 		position: relative;
 		padding: 1.4rem 0;
 		display: grid;
-		grid-template-columns: 1fr 195px 170px 1fr;
+		grid-template-rows: 75px;
+		grid-template-columns: 1fr 205px 170px 1fr;
 		text-transform: uppercase;
 		// text-align: center;
 		background-color: #000000;
@@ -259,24 +265,31 @@ a {
 	}
 
 	&__box-left {
+		margin-right: 1rem;
 		position: relative;
 		grid-column: 2/3;
-		& h1 {
-			// text-align: start;
-			font-size: 3.5rem;
-			color: var(--bb-fluo);
-		}
-		& span {
+		// & h1 {
+		// 	// text-align: start;
+		// 	font-size: 3.5rem;
+		// 	color: var(--bb-fluo);
+		// }
+		// & span {
+		// 	position: absolute;
+		// 	bottom: -2rem;
+		// 	left: 0;
+		// 	padding: 0rem 0rem 0 0.2rem;
+		// 	background-color: var(--bb-fluo);
+		// 	color: var(--bb-black);
+		// 	font-size: 2.2rem;
+		// 	line-height: 1.4rem;
+		// 	text-transform: uppercase;
+		// 	font-family: 'Visitor', serif;
+		// }
+
+		& img {
 			position: absolute;
-			bottom: -2rem;
-			left: 0;
-			padding: 0rem 0rem 0 0.2rem;
-			background-color: var(--bb-fluo);
-			color: var(--bb-black);
-			font-size: 2.2rem;
-			line-height: 1.4rem;
-			text-transform: uppercase;
-			font-family: 'Visitor', serif;
+			width: 100%;
+			height: auto;
 		}
 	}
 
@@ -780,7 +793,7 @@ a {
 .bbHand {
 	top: 0;
 	left: -100px;
-	max-height: 100vh;
+	max-height: 85vh;
 }
 
 .show-menu {
@@ -1030,12 +1043,13 @@ a {
 		&__box {
 			margin: 0;
 			grid-template-columns: auto auto;
+			grid-template-rows: auto;
 			justify-content: center;
-			gap: 2rem;
 			max-width: 320px;
 		}
 		&__box-left {
 			grid-column: 1 / 2;
+			width: 150px;
 			& h1 {
 				width: min-content;
 				font-size: 2.6rem;
@@ -1204,12 +1218,7 @@ a {
 		}
 
 		&__box-left {
-			& h1 {
-				font-size: 2.2rem;
-			}
-			& span {
-				font-size: 1.8rem;
-			}
+			width: 120px;
 		}
 	}
 	.lineUp {
