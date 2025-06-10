@@ -1177,6 +1177,14 @@ a {
 }
 
 @media screen and (max-width: 480px) {
+	.body-menu {
+		&__co-organizer {
+			& h2 {
+				font-size: 1.4rem;
+			}
+		}
+
+	}
 	.title {
 		&__box {
 			max-width: 270px;
