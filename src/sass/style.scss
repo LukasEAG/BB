@@ -536,21 +536,21 @@ a {
 			font-size: 1.4rem;
 		}
 
-		// &::before {
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	display: flex;
-		// 	justify-content: center;
-		// 	align-items: center;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	background: rgba($color: #000000, $alpha: 0.8);
-		// 	font-size: 2.2rem;
-		// 	text-align: center;
-		// 	z-index: 5;
-		// 	content: 'START REJESTRACJI WKRÓTCE!';
-		// }
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: rgba($color: #000000, $alpha: 0.8);
+			font-size: 2.2rem;
+			text-align: center;
+			z-index: 5;
+			content: 'START REJESTRACJI WKRÓTCE!';
+		}
 	}
 	&__form-row-box {
 		max-width: 450px;
