@@ -63,7 +63,7 @@ section {
 }
 .main-page {
 	position: relative;
-	min-height: 50vh;
+	min-height: 38vh;
 	transition: height 0.5s;
 	overflow: hidden;
 }
@@ -353,6 +353,7 @@ a {
 		& h2 {
 			margin: 4rem 0 0;
 			font-size: 2rem;
+			color: var(--bb-white);
 		}
 	}
 }
@@ -488,6 +489,49 @@ a {
 		pointer-events: all;
 	}
 }
+.partners {
+	opacity: 0;
+	pointer-events: none;
+	&__box {
+		margin: 2rem auto;
+		max-width: 1200px;
+	}
+	&__row {
+		margin: 3rem 0;
+	}
+
+	&__title {
+		padding: 1rem;
+		display: flex;
+		justify-content: space-between;
+
+		& h5 {
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			color: var(--bb-white);
+		}
+	}
+
+	&__logos {
+		padding: 1rem 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		background-color: var(--bb-white);
+		border-radius: 1rem;
+
+		& img {
+			width: auto;
+			height: auto;
+			max-width: 120px;
+		}
+	}
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
 .tickets {
 	opacity: 0;
 	pointer-events: none;
@@ -591,10 +635,10 @@ a {
 		}
 		&:nth-of-type(5) {
 			position: relative;
-			grid-template-columns: 1fr auto;		grid-template-rows:repeat(5,  minmax(auto, 35px));
+			grid-template-columns: 1fr auto;
+			grid-template-rows: repeat(5, minmax(auto, 35px));
 			align-items: center;
-			gap: .5rem 0;
-
+			gap: 0.5rem 0;
 
 			& label {
 				display: inline-block;
@@ -635,7 +679,7 @@ a {
 		font-family: 'VHSGothic';
 		text-transform: uppercase;
 		cursor: pointer;
-		transition: color .4s, background-color .4s;
+		transition: color 0.4s, background-color 0.4s;
 
 		&:hover {
 			color: var(--bb-black);
@@ -719,6 +763,40 @@ a {
 		pointer-events: all;
 	}
 }
+.partners-bar {
+	margin: 4rem auto;
+	max-width: 900px;
+
+	&__titles {
+		padding: 1rem;
+		display: flex;
+		justify-content: space-between;
+
+		& h5 {
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			color: var(--bb-white);
+		}
+	}
+	&__logos {
+		padding: 1rem 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		background-color: var(--bb-white);
+		border-radius: 1rem;
+
+		& img {
+			width: auto;
+			height: auto;
+			max-width: 120px;
+		}
+	}
+
+	&.active {
+		display: none;
+	}
+}
 .foot {
 	width: 100%;
 	margin: 0.5rem auto 0;
@@ -731,7 +809,7 @@ a {
 		& h3,
 		a {
 			font-size: 1rem;
-			color: var(--bb-black);
+			color: var(--bb-white);
 		}
 	}
 
@@ -1190,7 +1268,6 @@ a {
 				font-size: 1.4rem;
 			}
 		}
-
 	}
 	.title {
 		&__box {
@@ -1250,7 +1327,7 @@ a {
 			grid-template-columns: 1fr;
 			grid-template-rows: repeat(2, 30px);
 
-				&:nth-of-type(5) {
+			&:nth-of-type(5) {
 				grid-template-rows: repeat(5, minmax(auto, 75px));
 			}
 
@@ -1259,5 +1336,4 @@ a {
 			}
 		}
 	}
-	
 }

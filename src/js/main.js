@@ -1,5 +1,6 @@
 const body = document.querySelector('body')
 const main = document.querySelector('main')
+const partnersBar = document.querySelector('.partners-bar')
 
 const colorTable = ['--bb-pink', '--bb-green', '--bb-fluo', '--bb-blue', '--bb-salmon', '--bb-grey']
 const colorOb = {
@@ -13,7 +14,7 @@ const colorOb = {
 const colorClicked = {
 	lineUp: '--bb-nav',
 	info: '--bb-salmon',
-	partners: '--bb-salmon',
+	partners: '--bb-dark-blue',
 	tickets: '--bb-dark-blue',
 	contact: '--bb-purple',
 }
@@ -53,7 +54,6 @@ menuBtns.forEach((link, index) => {
 })
 
 const addBodyColor = btnAttribute => {
-	console.log(colorOb[btnAttribute])
 
 	document.body.style.setProperty('--bg-color', `var(${colorOb[btnAttribute]})`)
 }
@@ -111,13 +111,19 @@ const defaultPageHeight = () => {
 	mainPage.removeAttribute('style')
 	titleBox.removeChild(h2Title)
 }
+const partnersBarHendler = (curentPage) => {
+	curentPage !== "PARTNERZY"  ? partnersBar.classList.remove('active') : partnersBar.classList.add('active')
+
+}
 const titleBoxHendler = (name, pageName) => {
 	titleBox.style.setProperty('--title-bg-color', `var(${colorOb[name]})`)
 	titleBox.appendChild(h2Title)
 	h2Title.innerText = pageName
+	partnersBarHendler(pageName)
 }
 const btnClosePage = document.querySelector('.close-menu__btn')
 
 btnClosePage.addEventListener('click', () => {
 	defaultPageHeight()
+	partnersBarHendler()
 })
