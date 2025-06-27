@@ -498,6 +498,19 @@ a {
 	}
 	&__row {
 		margin: 3rem 0;
+
+		&:nth-of-type(3) {
+			.partners {
+				&__logos {
+					justify-content: flex-start;
+				}
+				&__logos-box {
+					& img {
+						max-width: 220px;
+					}
+				}
+			}
+		}
 	}
 
 	&__title {
@@ -523,14 +536,16 @@ a {
 
 	&__logos-box {
 		padding: 0 1rem;
-		// & :nth-of-type(1) {
 
-		// 	max-width: 120px;
-		// }
 		& img {
+			padding: 1.2rem;
 			width: 100%;
 			height: auto;
 		}
+	}
+
+	&__mobile {
+		display: none;
 	}
 
 	&.active {
@@ -784,7 +799,7 @@ a {
 
 		& h5 {
 			padding: 0 0.3rem;
-			font-size: clamp(0.8rem, 1.6vw, 1.4rem);
+			font-size: clamp(0.8rem, 1.6vw, 1.2rem);
 			text-transform: uppercase;
 			color: var(--bb-white);
 		}
@@ -804,15 +819,12 @@ a {
 
 	&__img-box {
 		margin: 0 0.5rem;
+		padding: 1rem;
 		max-width: 120px;
 
 		& img {
 			width: 100%;
 			height: auto;
-
-			&:nth-of-type(5) {
-				max-width: 80px;
-			}
 		}
 	}
 
@@ -1217,6 +1229,14 @@ a {
 		}
 	}
 
+	.partners {
+		&__logos-box {
+			& img {
+				padding: 0.6rem;
+			}
+		}
+	}
+
 	.contact {
 		&__title-text {
 			& p {
@@ -1233,6 +1253,12 @@ a {
 					display: block;
 				}
 			}
+		}
+	}
+
+	.partners-bar {
+		&__img-box {
+			padding: 0.5rem;
 		}
 	}
 
@@ -1282,6 +1308,13 @@ a {
 			width: 100%;
 		}
 	}
+	.partners {
+		&__logos-box {
+			& img {
+				padding: 0;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -1311,6 +1344,75 @@ a {
 	.lineUp {
 		&__box {
 			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+	}
+	.partners {
+		&__box {
+			display: none;
+		}
+
+		&__mobile {
+			margin: 0 auto;
+			padding: 0 0.5rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			max-width: 360px;
+
+			& h5 {
+				margin: 2rem 0;
+				font-size: 1.2rem;
+				text-transform: uppercase;
+				color: var(--bb-white);
+			}
+		}
+
+		&__mobile-organizer,
+		&__mobile-co-organizer,
+		&__mobile-patron {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		&__mobile-logos {
+			padding: 1.6rem 1rem;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-direction: row;
+			width: 100%;
+			background-color: var(--bb-white);
+			border-radius: 1rem;
+
+			& img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		&__mobile-partners {
+			.partners {
+				&__mobile-logos {
+					flex-wrap: wrap;
+					& img {
+						padding: 1rem;
+						max-width: 90px;
+					}
+				}
+			}
+		}
+		&__mobile-media {
+			.partners {
+				&__mobile-logos {
+					flex-wrap: wrap;
+						& img {
+						padding: 1rem;
+						max-width: 165px;
+					}
+				}
+			}
 		}
 	}
 	.tickets {
@@ -1345,6 +1447,10 @@ a {
 		margin: 2rem auto;
 		&__titles {
 			display: none;
+		}
+
+		&__img-box {
+			padding: 0;
 		}
 	}
 }
