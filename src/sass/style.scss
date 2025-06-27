@@ -777,6 +777,7 @@ a {
 		justify-content: space-between;
 
 		& h5 {
+			padding: 0 .3rem;
 			font-size: clamp(.8rem, 1.6vw, 1.4rem);
 			text-transform: uppercase;
 			color: var(--bb-white);
@@ -1333,6 +1334,12 @@ a {
 					padding-right: 2rem;
 				}
 			}
+		}
+	}
+	.partners-bar {
+		margin: 2rem auto;
+		&__titles {
+			display: none;
 		}
 	}
 }
