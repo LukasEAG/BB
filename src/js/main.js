@@ -85,7 +85,7 @@ const pageHendler = (pageAttr, pageTitle) => {
 	currentPage = page
 	addPageHeight(pageH)
 	titleBoxHendler(pageAttr, pageTitle)
-	partnersBarHendler(pageTitle)
+	partnersBarHendler(pageTitle.trim())
 }
 
 const closeMobileMenu = () => {
@@ -119,7 +119,9 @@ const titleBoxHendler = (name, pageName) => {
 const partnersBarHendler = currentPage => {
 	const partnersBar = document.querySelector('.partners-bar')
 
-	currentPage.trim() !== 'PARTNERZY' ? partnersBar.classList.remove('active') : partnersBar.classList.add('active')
+	typeof currentPage === 'string' && currentPage.trim() === 'PARTNERZY'
+		? partnersBar.classList.add('active')
+		: partnersBar.classList.remove('active')
 }
 const btnClosePage = document.querySelector('.close-menu__btn')
 
