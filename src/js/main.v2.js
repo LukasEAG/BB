@@ -175,7 +175,7 @@ async function checkLimit() {
 		regFormPopup.classList.remove('limit')
 	}
 }
-checkLimit()
+
 
 const createSpanHendler = msg => {
 	const span = document.createElement('span')
@@ -267,5 +267,5 @@ closePopupBtn.addEventListener('click', e => {
 			if (field) field.value = ''
 		})
 	}
-	checkLimit()
+	
 })
