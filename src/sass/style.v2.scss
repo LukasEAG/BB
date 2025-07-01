@@ -73,6 +73,10 @@ section {
 	height: 100%;
 	overflow: hidden;
 }
+.flatpickr-calendar {
+	width: 320px !important;
+	font-size: 16px;
+}
 
 a {
 	text-decoration: none;
@@ -500,6 +504,21 @@ a {
 	&__row {
 		margin: 3rem 0;
 
+		&:nth-of-type(2) {
+			.partners {
+				&__logos {
+					&:nth-of-type(3) {
+						margin: 1rem 0;
+
+						& img {
+							padding: 0rem;
+							max-width: 200px;
+						}
+					}
+				}
+			}
+		}
+
 		&:nth-of-type(3) {
 			.partners {
 				&__logos {
@@ -542,6 +561,18 @@ a {
 			padding: 1.2rem;
 			width: 100%;
 			height: auto;
+		}
+	}
+	&__box-span {
+		display: flex;
+		justify-content: flex-end;
+
+		& span {
+			padding: 1rem 0;
+			max-width: 40%;
+			font-size: 0.8rem;
+			line-height: 1.4rem;
+			color: var(--bb-white);
 		}
 	}
 
@@ -602,21 +633,21 @@ a {
 			font-size: 1.4rem;
 		}
 
-		&::before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			height: 100%;
-			background: rgba($color: #000000, $alpha: 0.8);
-			font-size: 2.2rem;
-			text-align: center;
-			z-index: 5;
-			content: 'START REJESTRACJI WKRÓTCE!';
-		}
+		// &::before {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	display: flex;
+		// 	justify-content: center;
+		// 	align-items: center;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	background: rgba($color: #000000, $alpha: 0.8);
+		// 	font-size: 2.2rem;
+		// 	text-align: center;
+		// 	z-index: 5;
+		// 	content: 'Z powodu problemów technicznych wrócimy do Was za chwilę. Przepraszamy!';
+		// }
 	}
 	&__form-row-box {
 		max-width: 450px;
@@ -656,6 +687,11 @@ a {
 			}
 		}
 		&:nth-of-type(5) {
+			& label {
+				color: var(--bb-purple);
+			}
+		}
+		&:nth-of-type(6) {
 			position: relative;
 			grid-template-columns: 1fr auto;
 			grid-template-rows: repeat(5, minmax(auto, 35px));
@@ -689,23 +725,89 @@ a {
 	}
 
 	& button {
+		padding: 0.8rem 2rem;
+		font-size: 1.6rem;
+		font-family: 'VHSGothic';
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+	&__send-box {
+		position: relative;
+	}
+	.sendingProceed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		background: rgba($color: #000000, $alpha: 0.8);
+		color: var(--bb-red);
+
+		&.active {
+			display: flex;
+		}
+	}
+
+	&__sendBtn {
 		display: block;
 		margin: 0 0 0 auto;
-		padding: 0.8rem 2rem;
 		width: auto;
 		height: 100%;
 		background: var(--bb-fluo);
 		border: none;
 		color: var(--bb-red);
-		font-size: 1.6rem;
-		font-family: 'VHSGothic';
-		text-transform: uppercase;
-		cursor: pointer;
+
 		transition: color 0.4s, background-color 0.4s;
 
 		&:hover {
 			color: var(--bb-black);
 			background-color: var(--bb-white);
+		}
+	}
+	&__form-popup {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba($color: #000000, $alpha: 0.8);
+
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 6;
+
+		&--msg {
+			padding: 1rem 2rem;
+			font-size: 1.6rem;
+			font-family: 'Share Tech Mono', monospace;
+			text-align: center;
+		}
+
+		&--closeBtn {
+			display: none;
+			margin: 2rem 0;
+			background: var(--bb-fluo);
+			border: none;
+			color: var(--bb-red);
+		}
+
+		&.limit {
+			display: flex;
+		}
+
+		&.active {
+			display: flex;
+			.tickets {
+				&__form-popup--closeBtn {
+					display: inline-block;
+				}
+			}
 		}
 	}
 	&.active {
@@ -821,11 +923,10 @@ a {
 	&__img-box {
 		margin: 0 0.5rem;
 		padding: 1rem;
-		max-width: 120px;
-
 		& img {
 			width: 100%;
 			height: auto;
+			max-height: 80px;
 		}
 	}
 
@@ -1408,11 +1509,16 @@ a {
 			.partners {
 				&__mobile-logos {
 					flex-wrap: wrap;
-						& img {
+					& img {
 						padding: 1rem;
 						max-width: 165px;
 					}
 				}
+			}
+		}
+		&__box-span {
+			& span {
+				max-width: 100%;
 			}
 		}
 	}
@@ -1429,12 +1535,15 @@ a {
 				font-size: 1rem;
 			}
 		}
+		&__form-popup--msg {
+			padding: 1rem;
+		}
 		&__form-row {
 			& label {
 				font-size: 1.4rem;
 			}
 
-			&:nth-of-type(5) {
+			&:nth-of-type(6) {
 				margin: 3rem 0;
 				grid-template-rows: repeat(5, minmax(auto, 60px));
 
@@ -1463,7 +1572,7 @@ a {
 			grid-template-columns: 1fr;
 			grid-template-rows: repeat(2, 30px);
 
-			&:nth-of-type(5) {
+			&:nth-of-type(6) {
 				grid-template-rows: repeat(5, minmax(auto, 75px));
 			}
 

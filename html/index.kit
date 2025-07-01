@@ -21,7 +21,11 @@
     <link rel="apple-touch-icon" href="./dist/img/favicons/apple-touch-icon.png">
     <link rel="manifest" href="./dist/img/favicons/site.webmanifest">
     <link rel="canonical" href="https://bliskobrzegu.pl">
-    <link rel="stylesheet" href="./dist/css/style.min.css">
+    <link rel="stylesheet" href="./dist/css/style.v2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+
+
 </head>
 
 <body>
@@ -125,14 +129,25 @@
                         <li>dokonały rejestracji poprzez formularz na stronie: www.bliskobrzegu.pl</li>
                         <span>Podczas rejestracji należy podać:</span>
                         <li>imię,</li>
+                        <li>nazwisko</li>
                         <li>numer telefonu,</li>
-                        <li>adres e-mail.</li>
+                        <li>adres e-mail,</li>
+                        <li>datę urodzenia.</li>
                         <span>Na podany adres e-mail uczestnik otrzyma informacje dotyczące kolejnych kroków.</span>
                         <span>Opaski uprawniające do wejścia będą wydawane tylko osobom zarejestrowanym – w dniu
                             wydarzenia, w wyznaczonym punkcie, w godzinach 12:00–18:00.</span>
                         <span>🔄 Jeśli nie możesz wziąć udziału, a chcesz przekazać swoje miejsce innej osobie (np.
                             bliskiemu), napisz na: ticket@bliskobrzegu.pl. Organizator zastrzega sobie prawo do
                             odpowiedzi w ciągu 5 dni roboczych oraz do odmowy zmiany danych uczestnika.</span>
+                        <span>⚠️ Jedno zgłoszenie w formularzu odpowiada jednej wejściówce na festiwal i jest przypisane
+                            do
+                            osoby dokonującej rejestracji.
+                            Nie ma możliwości rejestrowania innych osób – każdy uczestnik musi zarejestrować się
+                            samodzielnie, podając własne dane.
+                            Organizator zastrzega sobie prawo do weryfikacji autentyczności danych podanych w formularzu
+                            na podstawie dokumentu tożsamości uczestnika.
+                            Osoby nieposiadające odpowiedniego dokumentu lub budzące wątpliwości co do wieku bądź
+                            tożsamości nie zostaną wpuszczone na teren festiwalu.</span>
                         <h4>🛡️ PRAWA ORGANIZATORA</h4>
                         <span>📋 Organizator zastrzega sobie prawo do:</span>
                         <li>ograniczenia liczby uczestników ze względów bezpieczeństwa,</li>
@@ -322,7 +337,7 @@
                         </div>
                         <div class="lineUp__card">
                             <div class="lineUp__card-front">
-                                <img src="./dist/img/artistCard.png" alt="">
+                                <img src="./dist/img/dust.png" alt="Zdjecie artysty DJ Dust">
                             </div>
                             <div class="lineUp__card-back">
                                 <div class="lineUp__card-back-title">
@@ -331,9 +346,10 @@
                                 </div>
 
                                 <div class="lineUp__card-back-social">
-                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
+                                    <a href="https://www.instagram.com/dust.pl?igsh=Y3N6MnRud2psNmtu" target="_blank"
+                                        rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                             class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <path
@@ -341,16 +357,17 @@
                                             <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                                             <path d="M16.5 7.5v.01" />
                                         </svg></a>
-                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="currentColor"
                                             class="icon icon-tabler icons-tabler-filled icon-tabler-brand-spotify">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <path
                                                 d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-2.168 11.605c-1.285 -1.927 -4.354 -2.132 -6.387 -.777a1 1 0 0 0 1.11 1.664c1.195 -.797 3.014 -.675 3.613 .223a1 1 0 1 0 1.664 -1.11m1.268 -3.245c-2.469 -1.852 -5.895 -2.187 -8.608 -.589a1 1 0 0 0 1.016 1.724c1.986 -1.171 4.544 -.92 6.392 .465a1 1 0 0 0 1.2 -1.6m1.43 -3.048c-3.677 -2.298 -7.766 -2.152 -10.977 -.546a1 1 0 0 0 .894 1.788c2.635 -1.317 5.997 -1.437 9.023 .454a1 1 0 1 0 1.06 -1.696" />
                                         </svg></a>
-                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
+                                    <a href="https://soundcloud.com/dustpl" target="_blank"
+                                        rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                             class="icon icon-tabler icons-tabler-outline icon-tabler-brand-soundcloud">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <path
@@ -460,7 +477,7 @@
                         </div>
                         <div class="lineUp__card">
                             <div class="lineUp__card-front">
-                                <img src="./dist/img/murcha.png" alt="">
+                                <img src="./dist/img/murcha.png" alt="Zdjecie artysty Adrian Murcha">
                             </div>
                             <div class="lineUp__card-back">
                                 <div class="lineUp__card-back-title">
@@ -684,6 +701,10 @@
                                             alt="Logo powiatu Kołobrzeskiego"></a>
                                 </div>
                             </div>
+                            <div class="partners__box-span">
+                                <span>Patronat Honorowy Starosty Kołobrzeskiego Mirosława Tessikowskiego. Wydarzenie 
+                                    dofinansowane z budżetu Powiatu Kołobrzeskiego.</span>
+                            </div>
                         </div>
                         <div class="partners__row">
                             <div class="partners__title">
@@ -713,6 +734,12 @@
                                 </div>
                                 <div class="partners__logos-box">
                                     <img src="./dist/img/albudP.png" alt="Logo firmy Al-bud">
+                                </div>
+                              
+                            </div>
+                            <div class="partners__logos">
+                                 <div class="partners__logos-box">
+                                    <img src="./dist/img/hydraulikP.png" alt="Firma hydrauliczna Karluk-Hydro ">
                                 </div>
                             </div>
                         </div>
@@ -773,33 +800,40 @@
                                             alt="Logo powiatu Kołobrzeskiego"></a>
                                 </div>
                             </div>
+                            <div class="partners__box-span">
+                                <span>Patronat Honorowy Starosty Kołobrzeskiego Mirosława Tessikowskiego. Wydarzenie 
+                                    dofinansowane z budżetu Powiatu Kołobrzeskiego.</span>
+                            </div>
                         </div>
                         <div class="partners__mobile-partners">
                             <h5>Partnerzy:</h5>
                             <div class="partners__mobile-logos">
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/locosP.png" alt="">
+                                    <img src="./dist/img/locosP.png" alt="Firma 4Locos">
                                 </div>
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/moyaP.png" alt="">
+                                    <img src="./dist/img/moyaP.png" alt="Stacja Paliw Gościno">
                                 </div>
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/jantarP.png" alt="">
+                                    <img src="./dist/img/jantarP.png" alt="Firma Jantar">
                                 </div>
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/colbergP.png" alt="">
+                                    <img src="./dist/img/colbergP.png" alt="Firma Colberg P">
                                 </div>
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/autoP.png" alt="">
+                                    <img src="./dist/img/autoP.png" alt="Auto Perfect">
                                 </div>
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/pralniaP.png" alt="">
+                                    <img src="./dist/img/pralniaP.png" alt="Pralnia Sarbia">
                                 </div>
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/akademiaP.png" alt="">
+                                    <img src="./dist/img/akademiaP.png" alt="Firma Akademia Ratownictwa">
                                 </div>
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/albudP.png" alt="">
+                                    <img src="./dist/img/albudP.png" alt="Firma Al-bud">
+                                </div>
+                                <div class="partners__mobile-logos-box">
+                                    <img src="./dist/img/hydraulikP.png" alt="Firma hydrauliczna Karluk-Hydro ">
                                 </div>
                             </div>
                         </div>
@@ -807,10 +841,10 @@
                             <h5>Media Patroni:</h5>
                             <div class="partners__mobile-logos">
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/gazetakolobrzeg.png" alt="">
+                                    <img src="./dist/img/gazetakolobrzeg.png" alt="logo Gazety Kolobrzeskiej">
                                 </div>
                                 <div class="partners__mobile-logos-box">
-                                    <img src="./dist/img/radiokoszalin.png" alt="">
+                                    <img src="./dist/img/radiokoszalin.png" alt="Loro Radia Koszalin">
                                 </div>
 
                             </div>
@@ -826,27 +860,46 @@
                                 przez poniższy
                                 formularz. Liczba wejściówek jest ograniczona i podzielona na pule. Zapoznaj się z
                                 <a btn-name="info">REGULAMINEM</a> i obserwuj nas na Instagramie, aby nie przegapić
-                                startu rejestracji.
+                                startu rejestracji. Jedno zgłoszenie w formularzu odpowiada jednej wejściówce na
+                                festiwal i jest
+                                przypisane do osoby dokonującej rejestracji.
+                                Nie ma możliwości rejestrowania innych osób – każdy uczestnik musi zarejestrować się
+                                samodzielnie, podając własne dane.
+                                Organizator zastrzega sobie prawo do weryfikacji autentyczności danych podanych w
+                                formularzu na podstawie dokumentu tożsamości uczestnika.
+                                Osoby nieposiadające odpowiedniego dokumentu lub budzące wątpliwości co do wieku bądź
+                                tożsamości nie zostaną wpuszczone na teren festiwalu.
                             </p>
                         </div>
-                        <form class="tickets__form" action="">
+                        <form registration-form class="tickets__form">
+                            <div registration-form-popup class="tickets__form-popup">
+                                <button close-popup-btn class="tickets__form-popup--closeBtn">Zamknij</button>
+                            </div>
                             <h4>ODBIERZ WEJŚCIÓWKĘ I TAŃCZ BLISKO BRZEGU.</h4>
                             <div class="tickets__form-row-box">
                                 <div class="tickets__form-row">
                                     <label for="userName">Imię</label>
-                                    <input type="text" name="userName" id="userName">
+                                    <input type="text" name="userName" id="userName" placeholder="min 3, max 13 znaków">
+                                </div>
+                                <div class="tickets__form-row">
+                                    <label for="userSurnName">Nazwisko</label>
+                                    <input type="text" name="userSurName" id="userSurnName"
+                                        placeholder="min 2, max 15 znaków">
                                 </div>
                                 <div class="tickets__form-row">
                                     <label for="userEmail">E-mail</label>
-                                    <input type="text" name="userEmail" id="userEmail">
+                                    <input type="text" name="userEmail" id="userEmail"
+                                        placeholder="(np. imie@domena.pl)">
                                 </div>
                                 <div class="tickets__form-row">
                                     <label for="userPhone">Telefon</label>
-                                    <input type="tel" name="userPhone" id="userPhone">
+                                    <input type="tel" name="userPhone" id="userPhone" placeholder="+48XXXXXXXXX">
                                 </div>
                                 <div class="tickets__form-row">
                                     <label for="birthDate">Data Urodzenia</label>
-                                    <input type="text" name="birthDate" id="birthDate">
+                                    <input type="text" id="birthDate" name="birthDate"
+                                        placeholder="Wybierz datę urodzenia" />
+
                                 </div>
                                 <div class="tickets__form-row">
 
@@ -855,27 +908,31 @@
                                         oświadcza, że zapoznał się z Regulaminem Wydarzenia oraz w pełni go
                                         akceptuje.
                                     </label>
-                                    <span> <input type="checkbox" id="consent-1" name="consent-1"></span>
+                                    <span> <input type="checkbox" id="consent-1" name="checkbox" value="1"></span>
                                     <label for="consent-2">Uczestnik wyraża zgodę na przetwarzanie swoich danych
                                         osobowych w celach marketingowych oraz informacyjnych przez organizatora
                                         wydarzenia – EAG oraz markę BliskoBrzegu. </label>
-                                    <span> <input type="checkbox" id="consent-2" name="consent-2"></span>
+                                    <span> <input type="checkbox" id="consent-2" name="checkbox" value="2"></span>
                                     <label for="consent-3">Uczestnik zezwala na przekazanie swoich danych osobowych
                                         podmiotom trzecim współpracującym z EAG i marką BliskoBrzegu, wyłącznie w
                                         zakresie działań marketingowych i promocyjnych. </label>
-                                    <span> <input type="checkbox" id="consent-3" name="consent-3"></span>
+                                    <span> <input type="checkbox" id="consent-3" name="checkbox" value="3"></span>
                                     <label for="consent-4">Uczestnik wyraża zgodę na otrzymywanie informacji
                                         handlowych
                                         i marketingowych drogą mailową oraz telefoniczną, w tym poprzez wiadomości
                                         SMS.
                                     </label>
-                                    <span> <input type="checkbox" id="consent-4" name="consent-4"></span>
+                                    <span> <input type="checkbox" id="consent-4" name="checkbox" value="4"></span>
                                     <label for="consent-5">Rejestracja jest jednoznaczna z akceptacją powyższych
                                         postanowień.</label>
-                                    <span> <input type="checkbox" id="consent-5" name="consent-5"></span>
+                                    <span> <input type="checkbox" id="consent-5" name="checkbox" value="5"></span>
 
                                 </div>
-                                <button>register</button>
+                                <div class="tickets__send-box">
+                                    <span class="sendingProceed">Wysyłanie ...</span>
+                                    <button class="tickets__sendBtn">register</button>
+                                </div>
+
                             </div>
 
 
@@ -970,8 +1027,12 @@
     </footer>
     <img class="bbHand" src="./dist/img/bbHand.png" alt="">
     <img class="bbFlowerBlue" src="./dist/img/bbFlowerB.png" alt="">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pl.js"></script>
 
-    <script src="./dist/js/main.min.js"></script>
+
+    <script src="./dist/js/main.v2.min.js"></script>
+
 </body>
 
 </html>
