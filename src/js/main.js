@@ -160,6 +160,7 @@ const regFormMsg = document.querySelector('[registration-form-msg]')
 const sendingProccede = document.querySelector('.sendingProceed')
 const closePopupBtn = document.querySelector('[close-popup-btn]')
 
+
 async function checkLimit() {
 	const res = await fetch('/api/check_limit')
 	const data = await res.json()
@@ -167,7 +168,7 @@ async function checkLimit() {
 	if (!data.allowed) {
 		const span = document.createElement('span')
 		span.classList.add('tickets__form-popup--msg')
-		span.innerText = ` Limit osób został osiąnięty! Dziękujemy że jesteście z nami. Zespół Blisko Brzegu`
+		span.innerText = `Rejestracja została zakończona – mamy komplet! Dziękujemy za zaufanie i ogromne zainteresowanie. Tych, którym nie udało się zapisać, zapraszamy do śledzenia naszych social mediów – być może jeszcze w tym roku pojawi się dodatkowa szansa.`
 		regFormPopup.appendChild(span)
 		regFormPopup.classList.add('limit')
 	} else {

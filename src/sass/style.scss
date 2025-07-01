@@ -502,7 +502,7 @@ a {
 		max-width: 1200px;
 	}
 	&__row {
-		margin: 3rem 0;
+		margin: 1rem 0;
 
 		&:nth-of-type(2) {
 			.partners {
@@ -633,21 +633,23 @@ a {
 			font-size: 1.4rem;
 		}
 
-		// &::before {
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	display: flex;
-		// 	justify-content: center;
-		// 	align-items: center;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	background: rgba($color: #000000, $alpha: 0.8);
-		// 	font-size: 2.2rem;
-		// 	text-align: center;
-		// 	z-index: 5;
-		// 	content: 'Z powodu problemów technicznych wrócimy do Was za chwilę. Przepraszamy!';
-		// }
+		&::before {
+			padding: 1rem 2rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: rgba($color: #000000, $alpha: 0.8);
+			font-size: 1.6rem;
+			font-family: 'Share Tech Mono', monospace;
+			text-align: center;
+			z-index: 5;
+			content: 'Rejestracja została zakończona – mamy komplet! Dziękujemy za zaufanie i ogromne zainteresowanie. Tych, którym nie udało się zapisać, zapraszamy do śledzenia naszych social mediów – być może jeszcze w tym roku pojawi się dodatkowa szansa.';
+		}
 	}
 	&__form-row-box {
 		max-width: 450px;
