@@ -397,6 +397,15 @@ a {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		background-color: #3f4c5e;
+
+		& :nth-of-type(8),
+		& :nth-of-type(9) {
+			.lineUp {
+				&__card-back-social {
+					display: none;
+				}
+			}
+		}
 	}
 	&__card {
 		position: relative;
