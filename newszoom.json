@@ -1,0 +1,12 @@
+{
+	"1": {
+		"h3": "Zmiana organizacji, parking.",
+		"img": "./dist/img/trafficZoom.png",
+		"alt": "Grafik dotycząca zmiany orgnizacji ruchu na Blisko Brzegu Fest"
+	},
+	"2": {
+		"h3": "Zasady ewakuacji",
+		"img": "./dist/img/evacuationZoom.png",
+		"alt": "Informacje dotyczące zasad bezpieczeństwa i ewakuacji na festiwalu Blisko Brzegu"
+	}
+}

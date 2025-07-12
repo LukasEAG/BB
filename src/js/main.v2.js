@@ -23,6 +23,7 @@ const colorOb = {
 const colorClicked = {
 	lineUp: '--bb-nav',
 	info: '--bb-salmon',
+	news: '--bb-dark-blue',
 	partners: '--bb-dark-blue',
 	tickets: '--bb-dark-blue',
 	contact: '--bb-purple',
@@ -83,6 +84,10 @@ const mainPage = document.querySelector('#main-page')
 const titleBox = document.querySelector('.title-menu-checked')
 const h2Title = document.createElement('h2')
 let currentPage
+
+window.addEventListener('load', () => {
+	getNewsItems()
+})
 
 const pageHendler = (pageAttr, pageTitle) => {
 	body.classList.contains('show-menu') ? closeMobileMenu() : undefined
@@ -154,12 +159,10 @@ phoneInput.addEventListener('keydown', e => {
 	}
 })
 
-
 const regFormPopup = document.querySelector('[registration-form-popup]')
 const regFormMsg = document.querySelector('[registration-form-msg]')
 const sendingProccede = document.querySelector('.sendingProceed')
 const closePopupBtn = document.querySelector('[close-popup-btn]')
-
 
 async function checkLimit() {
 	const res = await fetch('/api/check_limit')
@@ -175,7 +178,6 @@ async function checkLimit() {
 		regFormPopup.classList.remove('limit')
 	}
 }
-
 
 const createSpanHendler = msg => {
 	const span = document.createElement('span')
@@ -267,5 +269,105 @@ closePopupBtn.addEventListener('click', e => {
 			if (field) field.value = ''
 		})
 	}
-	
+})
+
+const newsZoomBtn = document.querySelectorAll('[news-zoom-btn')
+const closNewsBtn = document.querySelector('[close-news-galley]')
+const newsGallery = document.querySelector('[news-gallery]')
+const newsBox = document.querySelector('.news__box')
+
+const getNewsItems = async () => {
+	try {
+		const res = await fetch('news.json')
+		if (!res.ok) {
+			throw new Error(`Respons status: ${res.satus}`)
+		}
+
+		const itemsData = await res.json()
+		createNewsItems(itemsData)
+	} catch (error) {
+		console.error(error.message)
+	}
+}
+
+const createNewsItems = data => {
+	for (const key in data) {
+		const newsRow = document.createElement('div')
+		newsRow.classList.add('news__row')
+		const newsRowSpan = document.createElement('span')
+		newsRowSpan.innerText = '10/07/2025'
+		const newsRowTitle = document.createElement('h2')
+		newsRowTitle.innerText = data[key].h2
+		const newsRowImg = document.createElement('img')
+		newsRowImg.setAttribute('news-zoom-btn', key)
+		newsRowImg.src = data[key].img
+		newsRowImg.alt = data[key].alt
+		const newsRowP = document.createElement('p')
+		newsRowP.innerText = 'Kliknij aby powiększyć'
+
+		newsRow.appendChild(newsRowSpan)
+		newsRow.appendChild(newsRowTitle)
+		newsRow.appendChild(newsRowImg)
+		newsRow.appendChild(newsRowP)
+		newsBox.appendChild(newsRow)
+
+		setNewsListener(newsRowImg)
+	}
+}
+
+const getNewsZoom = async key => {
+	try {
+		const res = await fetch('newszoom.json')
+		if (!res.ok) {
+			throw new Error(`Response status: ${res.status}`)
+		}
+
+		const data = await res.json()
+		const selectedData = data[key]
+		if (selectedData) {
+			displayNewsZoom(selectedData)
+		} else {
+			console.error('Brak danych dla podanego klucza:', key)
+		}
+	} catch (error) {
+		console.error(error.message)
+	}
+}
+const zoomNewsBox = document.querySelector('.news-gallery__box')
+const zoomNewsSection = document.querySelector('[news-gallery]')
+const displayNewsZoom = data => {
+	console.log(data)
+
+	const zoomTitle = document.createElement('h3')
+	zoomTitle.innerText = data.h3
+
+	const zoomImg = document.createElement('img')
+	zoomImg.src = data.img
+	zoomImg.alt = data.alt
+	zoomNewsBox.appendChild(zoomTitle)
+	zoomNewsBox.appendChild(zoomImg)
+
+	zoomNewsSection.classList.add('active')
+}
+
+const setNewsListener = btn => {
+	btn.addEventListener('click', () => {
+		const btnKey = btn.getAttribute('news-zoom-btn')
+		newsGallery.classList.add('active')
+		body.classList.add('stop-scrolling')
+		getNewsZoom(btnKey)
+	})
+}
+
+newsZoomBtn.forEach(btn => {
+	btn.addEventListener('click', () => {
+		newsGallery.classList.add('active')
+	})
+})
+
+closNewsBtn.addEventListener('click', () => {
+	newsGallery.classList.remove('active')
+	body.classList.remove('stop-scrolling')
+
+	zoomNewsBox.replaceChildren()
 })

@@ -387,6 +387,75 @@ a {
 		pointer-events: all;
 	}
 }
+.news {
+	padding: 4rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+
+	&__container {
+		margin: 0 auto;
+		padding: 4rem 2rem;
+		max-width: 1200px;
+		background-color: var(--bb-nav);
+		border: 0.3rem solid var(--bb-green);
+		color: var(--bb-white);
+		border-radius: 0.8rem;
+
+		& h2 {
+			padding: 2rem 0;
+			text-align: center;
+
+			& a {
+				margin: 1rem 0 0;
+				display: block;
+				color: var(--bb-purple);
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__row {
+		padding: 1rem 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+
+		& span,
+		h2,
+		p {
+			margin: 0.3rem 0;
+			padding: 0.3rem 0;
+			font-size: 1rem;
+			text-align: start;
+		}
+		& img {
+			margin: 0.5rem 0;
+			width: 100%;
+			max-width: 250px;
+			height: auto;
+			cursor: pointer;
+		}
+
+		& h2 {
+			width: 252px;
+		}
+	}
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
 .lineUp {
 	padding: 2rem 0;
 	opacity: 0;
@@ -980,6 +1049,68 @@ a {
 	}
 }
 
+.news-gallery {
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+
+	background-color: rgba($color: black, $alpha: 0.9);
+	z-index: 100;
+	transition: opacity 0.4s;
+
+	&__container {
+		padding: 0 2rem;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 1200px;
+
+		& button {
+			margin: 1rem 2rem;
+			padding: .5rem;
+			position: absolute;
+			right: 0;
+			font-size: 3rem;
+			color: var(--bb-red);
+			background-color: transparent;
+			border: none;
+			transition: background-color 0.4s, color 0.4s;
+			cursor: pointer;
+
+			&:hover {
+				color: var(--bb-black);
+				background-color: var(--bb-white);
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	& h3 {
+		padding: 6rem 0;
+		font-size: 2rem;
+		color: var(--bb-white);
+	}
+
+	& img {
+		width: 100%;
+		height: auto;
+	}
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
 .bbFlowerBlue,
 .bbHand,
 .bbFace {
@@ -1331,6 +1462,13 @@ a {
 			display: none;
 		}
 	}
+	.news {
+		&__container {
+			& h2 {
+				font-size: 1.2rem;
+			}
+		}
+	}
 	.info,
 	.lineUp,
 	.contact {
@@ -1409,6 +1547,12 @@ a {
 	.bbFace,
 	.bbHand {
 		display: none;
+	}
+
+	.news-gallery {
+		& h3 {
+			font-size: 1.2rem;
+		}
 	}
 }
 
