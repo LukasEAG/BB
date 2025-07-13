@@ -295,7 +295,7 @@ const createNewsItems = data => {
 		const newsRow = document.createElement('div')
 		newsRow.classList.add('news__row')
 		const newsRowSpan = document.createElement('span')
-		newsRowSpan.innerText = '10/07/2025'
+		newsRowSpan.innerText = data[key].date
 		const newsRowTitle = document.createElement('h2')
 		newsRowTitle.innerText = data[key].h2
 		const newsRowImg = document.createElement('img')

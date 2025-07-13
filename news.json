@@ -1,10 +1,12 @@
 {
 	"1": {
+        "date": "10/07/2025",
 		"h2": "Zmiana organizacji, parking.",
 		"img": "./dist/img/traffic.png",
 		"alt": "Grafik dotycząca zmiany orgnizacji ruchu na Blisko Brzegu Fest"
 	},
 	"2": {
+        "date": "10/07/2025",
 		"h2": "Zasady ewakuacji",
 		"img": "./dist/img/evacuation.png",
 		"alt": "Informacje dotyczące zasad bezpieczeństwa i ewakuacji na festiwalu Blisko Brzegu"
