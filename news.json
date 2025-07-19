@@ -10,5 +10,17 @@
 		"h2": "Zasady ewakuacji",
 		"img": "./dist/img/evacuation.png",
 		"alt": "Informacje dotyczące zasad bezpieczeństwa i ewakuacji na festiwalu Blisko Brzegu"
+	},
+	"3": {
+		"date": "19/07/2025",
+		"h2": "Mapa dojazdu",
+		"img": "./dist/img/mapaDojazdu.png",
+		"alt": "Mapa dojazdu na festiwal Blisko Brzegu"
+	}, 
+	"4": {
+		"date": "19/07/2025",
+		"h2": "Mapa Dargocic",
+		"img": "./dist/img/mapaDargocice.png",
+		"alt": "Mapa miejscowości Dargocice"
 	}
 }
